@@ -4,7 +4,10 @@ import numpy as np
 import pickle
 import altair as alt
 
-# Custom App Styling 
+# Hide Streamlit chart toolbar
+st.markdown("<style>[data-testid='stElementToolbar']{display:none;}</style>", unsafe_allow_html=True)
+
+# Custom app colors and style
 st.markdown(
     """
     <style>
@@ -119,6 +122,7 @@ with tab1:
 
             st.write(f"**Your probability of being a LinkedIn user:** {prob*100:.2f}%")
 
+            #Prediction resut, green means you are a user, red means you are not a user. 
             if prediction == 1:
                 st.markdown(
                     """
