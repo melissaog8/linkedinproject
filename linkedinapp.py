@@ -120,9 +120,9 @@ with tab1:
             st.write(f"**Your probability of being a LinkedIn user:** {prob:.3f}")
 
             if prediction == 1:
-                st.header("You are predicted to be a LinkedIn user — you give strong LinkedIn energy! 💼🔵")
+                st.warning("You are predicted to be a LinkedIn user! Professional mode: ON 💼")
             else:
-                st.warning("You are predicted not to be a LinkedIn user... definitely more offline energy here 😅🚫")
+                st.warning("You are predicted *not* to be a LinkedIn user. Offline mode: ON 📵")
 
     else:
         st.info("⚠️ Please agree to provide your information before using the predictor tool.")
