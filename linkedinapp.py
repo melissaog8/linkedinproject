@@ -120,9 +120,24 @@ with tab1:
             st.write(f"**Your probability of being a LinkedIn user:** {prob*100:.2f}%")
 
             if prediction == 1:
-                st.warning("You are predicted to be a LinkedIn user! Professional mode: ON 💼")
+                st.markdown(
+                    """
+                    <div style='background-color:#E6F9F0; padding:15px; border-radius:10px; color:#1B7A57; font-size:18px;'>
+                        You are predicted to be a LinkedIn user! Professional mode: ON 💼
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
             else:
-                st.warning("You are predicted *not* to be a LinkedIn user. Offline mode: ON 📵")
+                st.markdown(
+                    """
+                    <div style='background-color:#FFECEC; padding:15px; border-radius:10px; color:#B33939; font-size:18px;'>
+                        You are predicted <em>not</em> to be a LinkedIn user. Offline mode: ON 📵
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+
 
     else:
         st.info("⚠️ Please agree to provide your information before using the predictor tool.")
