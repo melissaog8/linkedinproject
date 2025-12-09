@@ -117,7 +117,7 @@ with tab1:
             prob = model.predict_proba(input_data)[0][1]
             prediction = model.predict(input_data)[0]
 
-            st.write(f"**Your probability of being a LinkedIn user:** {prob:.3f}")
+            st.write(f"**Your probability of being a LinkedIn user:** {prob*100:.2f}%")
 
             if prediction == 1:
                 st.warning("You are predicted to be a LinkedIn user! Professional mode: ON 💼")
@@ -166,7 +166,7 @@ with tab2:
     # Drop missing values
     li_df = li_df.dropna()
 
-    # No longer needed
+    # No longer needed column
     li_df = li_df.drop(columns=["web1h"])
 
     # Rename sm_li to linkedin for readability
