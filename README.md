@@ -1,0 +1,1 @@
+This repository contains my final project for Programming Data II. It includes a logistic regression model, visualizations, and a Streamlit app predicting whether someone is likely to be a LinkedIn user or not.
